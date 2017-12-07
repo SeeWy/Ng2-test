@@ -1,0 +1,19 @@
+<div style="text-align:center">
+  <header class="header">
+    <ul class="clearfix">
+      <li *ngFor="let item of items" (click)="changeList(item)">
+        {{item}}
+      </li>
+      <div style="clear: both;"></div>
+    </ul>
+  </header>
+</div>
+<h2></h2>
+<ul class="todo-list">
+  <li *ngFor="let list of lists" (click)="gotoDetail(list,lists.indexOf(list))">
+    <img src="{{list.avatarUrl}}" alt="" />
+    {{list.realName}}
+  </li>
+  <div style="clear: both;"></div>
+</ul>
+

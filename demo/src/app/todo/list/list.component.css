@@ -1,0 +1,25 @@
+*{
+  padding:0;
+  margin:0;
+}
+header{
+  background: red;
+  width: 100%;
+  overflow-x:auto ;
+}
+ul>li{
+  float: left;
+  height:40px;
+  line-height:40px;
+  color: #fff;
+  list-style: none;
+  margin-left: 10px;
+}
+.todo-list>li{
+  width: 45%;
+  height:100%;
+  color: #000;
+}
+.todo-list li img{
+  width: 100%;
+}
