@@ -7,13 +7,15 @@
       <div style="clear: both;"></div>
     </ul>
   </header>
+  <div class="todo-item">
+    <h2></h2>
+    <ul >
+      <li *ngFor="let list of lists" (click)="gotoDetail(list,lists.indexOf(list))">
+        <img src="{{list.avatarUrl}}" alt="" />
+      </li>
+      <div style="clear: both;"></div>
+    </ul>
+  </div>
 </div>
-<h2></h2>
-<ul class="todo-list">
-  <li *ngFor="let list of lists" (click)="gotoDetail(list,lists.indexOf(list))">
-    <img src="{{list.avatarUrl}}" alt="" />
-    {{list.realName}}
-  </li>
-  <div style="clear: both;"></div>
-</ul>
+
 

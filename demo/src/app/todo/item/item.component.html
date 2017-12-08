@@ -1,7 +1,12 @@
-<!--<div >-->
-  <!--<div class="beauty_item" >-->
-    <!--<image src="{{item.list[0].small}}" ></image>-->
-    <!--<span>{{item.title}}</span>-->
-  <!--</div>-->
-<!--</div>-->
-<div>222</div>
+
+<div class="todo-item">
+  <h2></h2>
+  <ul >
+    <li *ngFor="let list of itemList" (click)="gotoDetail(list,itemList.indexOf(list))">
+      {{list.realName}}
+      <img src="{{list.avatarUrl}}" alt="" />
+
+    </li>
+    <div style="clear: both;"></div>
+  </ul>
+</div>

@@ -1,13 +1,14 @@
 *{
   padding:0;
   margin:0;
+  list-style: none;
 }
 header{
   background: red;
   width: 100%;
   overflow-x:auto ;
 }
-ul>li{
+.clearfix>li{
   float: left;
   height:40px;
   line-height:40px;
@@ -15,11 +16,15 @@ ul>li{
   list-style: none;
   margin-left: 10px;
 }
-.todo-list>li{
-  width: 45%;
-  height:100%;
+
+.todo-item ul li{
+  width: 50%;
   color: #000;
+  float: left;
+  height:180px;
+  margin-top:1%;
+  overflow: hidden;
 }
-.todo-list li img{
+.todo-item ul li img{
   width: 100%;
 }

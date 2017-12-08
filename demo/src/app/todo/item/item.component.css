@@ -1,0 +1,9 @@
+.todo-item ul li{
+  width: 45%;
+  color: #000;
+  float: left;
+  height:180px;
+}
+.todo-item ul li img{
+  width: 100%;
+}

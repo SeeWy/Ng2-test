@@ -1,7 +1,7 @@
 import {Component ,OnInit} from '@angular/core';
 import { ActivatedRoute, Router, Params } from '@angular/router';
 import { TodoService } from '../todo.service';
-
+import {Todo} from '../todo';
 @Component({
   selector: 'todo-detail',
   templateUrl: './detail.component.html',
@@ -14,7 +14,7 @@ export class TodoDetailComponent implements OnInit {
               private router: Router,
               private todoService: TodoService
   ) {}
-  infoData:any
+  infoData:Todo[]
   ngOnInit() {
     let index = this.route.snapshot.queryParams['index'];
     let type = this.route.snapshot.queryParams['type'];

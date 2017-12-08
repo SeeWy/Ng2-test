@@ -1,8 +1,9 @@
-import {Component, OnChanges, ViewEncapsulation,SimpleChanges} from '@angular/core';
+import {Component, OnInit, ViewEncapsulation,SimpleChanges} from '@angular/core';
 import {TodoService} from '../todo.service'
-import {Todo} from '../todo';
-import {Router} from '@angular/router';
+
+import { ActivatedRoute, Router, Params } from '@angular/router';
 import 'rxjs/add/operator/toPromise';
+import {isUndefined} from "util";
 
 @Component({
   selector: 'todo-list',
@@ -12,47 +13,57 @@ import 'rxjs/add/operator/toPromise';
   encapsulation: ViewEncapsulation.Native
 })
 
-export class TodoListComponent {
-  selectedTodo: any;
-  items: Todo[] = [];
+export class TodoListComponent implements OnInit{
+  selectedType: any;
+  items:any = [];
   lists: any;
 
   constructor(
     private todoService: TodoService,
     private router: Router,
-  ) {
-
-
-
-
-
-
-      this.todoService.getHeadItem().then(
-        (todos) => {
-          this.items = todos;
-          let type = this.selectedTodo ? this.selectedTodo :todos[0]
+    private route: ActivatedRoute,
+  ) {}
+  ngOnInit(){
+    this.todoService.getHeadItem().then(
+      (todos) => {
+        console.log(todos)
+        this.items = todos;
+        if(this.route.snapshot.queryParams['type'] == undefined){
+          let type =  this.items[0]
+          this.router.navigate(['/todo/list'], {queryParams: {type: type}});
           this.todoService.getListItem(type).then(
             (lists) => {
               this.lists = lists
+              this.selectedType = type
+            }
+          )
+        }else{
+          this.todoService.getListItem(this.route.snapshot.queryParams['type']).then(
+            (lists) => {
+              this.lists = lists
+              this.selectedType = this.route.snapshot.queryParams['type']
             }
           )
         }
-      )
-
-    console.log(this.todoService.itemList)
+      }
+    )
   }
+
   changeList(item): void {
+    this.router.navigate(['/todo/list'], {queryParams: {type: item}});
     this.todoService.getListItem(item).then(
       (lists) => {
         this.lists = lists
-        this.selectedTodo = item
-        console.log( this.selectedTodo)
+        this.selectedType = item
       }
     )
   }
 
   gotoDetail(list, index): void {
-    this.router.navigate(['/todo/detail'], {queryParams: {type: this.selectedTodo, index: index}});
+    let type = this.route.snapshot.queryParams['type']
+    this.router.navigate(['/todo/detail'], {queryParams: {type: type, index: index}});
   }
+
+
 
 }
