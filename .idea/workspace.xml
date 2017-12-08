@@ -2,19 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0a966cd5-a663-424c-9ed0-1165890f4b54" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/app/todo/item/item.component.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/typescript-compiler.xml" afterPath="$PROJECT_DIR$/.idea/typescript-compiler.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo/src/app/todo/detail/detail.component.html" afterPath="$PROJECT_DIR$/demo/src/app/todo/detail/detail.component.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo/src/app/todo/detail/detail.component.ts" afterPath="$PROJECT_DIR$/demo/src/app/todo/detail/detail.component.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo/src/app/todo/item/item.component.html" afterPath="$PROJECT_DIR$/demo/src/app/todo/item/item.component.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo/src/app/todo/item/item.component.ts" afterPath="$PROJECT_DIR$/demo/src/app/todo/item/item.component.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo/src/app/todo/list/list.component.css" afterPath="$PROJECT_DIR$/demo/src/app/todo/list/list.component.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo/src/app/todo/list/list.component.html" afterPath="$PROJECT_DIR$/demo/src/app/todo/list/list.component.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo/src/app/todo/list/list.component.ts" afterPath="$PROJECT_DIR$/demo/src/app/todo/list/list.component.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo/src/app/todo/todo.service.ts" afterPath="$PROJECT_DIR$/demo/src/app/todo/todo.service.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo/src/app/todo/todo.ts" afterPath="$PROJECT_DIR$/demo/src/app/todo/todo.ts" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -331,7 +319,7 @@
       <option name="presentableId" value="Default" />
       <updated>1512547706909</updated>
       <workItem from="1512547708293" duration="20499000" />
-      <workItem from="1512703981340" duration="11453000" />
+      <workItem from="1512703981340" duration="11512000" />
     </task>
     <task id="LOCAL-00001" summary="代码提交">
       <created>1512633277833</created>
@@ -347,11 +335,18 @@
       <option name="project" value="LOCAL" />
       <updated>1512633340865</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="代码提交">
+      <created>1512716617878</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1512716617878</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31952000" />
+    <option name="totallyTimeSpent" value="32011000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
